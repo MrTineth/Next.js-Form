@@ -161,7 +161,7 @@ function page() {
        {errors.allFields && 
        <Alert status='error'>
        <AlertIcon />
-       <AlertDescription>Fill the form fields.</AlertDescription>
+       <AlertDescription>Fill the form fields!</AlertDescription>
        </Alert>}
        </FormLabel>
           

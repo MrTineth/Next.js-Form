@@ -20,6 +20,7 @@ export default function Home() {
     } else {
       
       setSuccess(true); 
+      setError(false);
     }
   };
 
@@ -54,7 +55,7 @@ export default function Home() {
             fontSize={"12px"} 
             color={"rgba(20,174,203,255)"} 
             fontWeight="bold">
-            User Name
+            User Name 
           </FormLabel>
           <Input  
             width={"330px"} 
@@ -91,7 +92,7 @@ export default function Home() {
           variant="solid" 
           cursor={"pointer"}  
           _hover={{backgroundColor: "rgba(20,174,203,0.8)" }} 
-          onClick={handleSignIn}
+          onClick={handleSignIn} 
         >
           Sign In
         </Button>
@@ -113,7 +114,7 @@ export default function Home() {
        {error && (
        <Alert status='error' mt={5} variant='left-accent'>
        <AlertIcon />
-       Login Error.
+       Login Error!
        </Alert>
        )}
 
