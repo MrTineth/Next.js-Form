@@ -1,17 +1,19 @@
 "use client"
+import React, { useState } from 'react'; 
 import { Button, Flex} from '@chakra-ui/react'
 import { Stack } from '@chakra-ui/react'
 import Link from "next/link";
 import './styles.css'
 import {FormControl,FormLabel,Input} from '@chakra-ui/react'
-import { useState } from 'react';
-import {Alert,AlertIcon,AlertTitle,AlertDescription,} from '@chakra-ui/react'
+import {Alert,AlertIcon} from '@chakra-ui/react'
 
 
 
 export default function Home() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [success, setSuccess] = useState(false); 
+  const [error, setError] = useState(false);
   
 
   const handleSignIn = () => {
@@ -24,14 +26,11 @@ export default function Home() {
     }
   };
 
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
-
   const handleReset = () => {
     setUsername('');
     setPassword('');
-    setSuccess('');
-    setError('');
+    setSuccess(false);
+    setError(false);
   };
 
   return (

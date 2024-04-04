@@ -1,15 +1,14 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'; 
 import { Flex} from '@chakra-ui/react'
 import { Stack, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import '../styles.css'
 import {FormControl,FormLabel,Input,} from '@chakra-ui/react'
-import { useState } from 'react'
-import {Alert,AlertIcon,AlertTitle,AlertDescription,} from '@chakra-ui/react'
+import {Alert,AlertIcon,AlertDescription,} from '@chakra-ui/react'
 
 
-function page() {
+function Page() {
 
   
     const [formData, setFormData] = useState({
@@ -23,7 +22,10 @@ function page() {
       email: '',
       password: '',
       confirmPassword: '',
+      allFields: '',
     });
+
+    const [success, setSuccess] = useState(false);
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -54,7 +56,7 @@ function page() {
       }
     };
 
-    const [success, setSuccess] = useState(false);
+    
   
     return (
           <Flex 
@@ -202,4 +204,4 @@ function page() {
       );
 }
 
-export default page
+export default Page
